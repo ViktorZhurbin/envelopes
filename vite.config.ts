@@ -1,23 +1,15 @@
-import { defineConfig } from "vite";
-import type { UserConfig } from "vite"; 
 import react from "@vitejs/plugin-react";
-import legacy from "@vitejs/plugin-legacy";
+import type { UserConfig } from "vite";
+import { defineConfig } from "vite";
+import checker from "vite-plugin-checker";
 import tsconfigPaths from "vite-tsconfig-paths";
-import mkcert from "vite-plugin-mkcert";
 
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(() => {
   const config: UserConfig = {
     server: {
-      https: true,
+      port: 5000,
     },
-    plugins: [
-      react(),
-      tsconfigPaths(),
-      legacy(),
-      mkcert({
-        source: "coding",
-      }),
-    ],
+    plugins: [react(), tsconfigPaths(), checker({ typescript: true })],
     build: {
       rollupOptions: {
         output: {
