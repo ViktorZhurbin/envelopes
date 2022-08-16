@@ -1,3 +1,4 @@
+import { Accounts } from "@/components/Accounts";
 import { GroupTitle } from "@/components/GroupTitle";
 
 export const Home = () => {
@@ -8,6 +9,7 @@ export const Home = () => {
         onClick={() => null}
         onClickIcon={() => null}
       />
+      <Accounts />
     </div>
   );
 };
