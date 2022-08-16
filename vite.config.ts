@@ -22,6 +22,8 @@ export default defineConfig(() => {
     },
     css: {
       modules: {
+        // reference: https://github.com/webpack/loader-utils#interpolatename
+        generateScopedName: "[folder]__[local]--[hash:base64:5]",
         localsConvention: "camelCaseOnly",
       },
     },
