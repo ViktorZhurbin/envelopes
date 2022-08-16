@@ -1,6 +1,12 @@
 body {
   margin: 0 auto;
-  padding: 24px;
   height: 100vh;
   max-width: 400px;
+}
+
+#root {
+  --root-padding: 24px;
+
+  padding: var(--root-padding);
+  height: calc(100% - var(--root-padding) * 2);
 }
