@@ -1,3 +1,11 @@
+import { BrowserRouter } from "react-router-dom";
+
+import { Navigation } from "@/routes/Navigation";
+
 export function App() {
-  return <div className="App">hello world</div>;
+  return (
+    <BrowserRouter>
+      <Navigation />
+    </BrowserRouter>
+  );
 }
