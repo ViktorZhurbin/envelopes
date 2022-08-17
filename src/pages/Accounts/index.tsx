@@ -1,12 +1,12 @@
-import { useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
-import { Accounts } from "@/components/Accounts";
+import { AccountsList } from "@/components/AccountsList";
 import { GroupTitle } from "@/components/GroupTitle";
 import { Pages } from "@/routes";
 
 import classes from "./style.module.css";
 
-export const Home = () => {
+export const Accounts = () => {
   const navigate = useNavigate();
 
   const handleAddAccount = () => {
@@ -16,11 +16,12 @@ export const Home = () => {
   return (
     <div className={classes.root}>
       <GroupTitle
-        title="Accounts"
+        title="Карты и счета"
         onClick={() => null}
         onClickIcon={handleAddAccount}
       />
-      <Accounts />
+      <AccountsList />
+      <Outlet />
     </div>
   );
 };

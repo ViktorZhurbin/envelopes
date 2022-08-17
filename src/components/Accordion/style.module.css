@@ -6,17 +6,21 @@
   --summary-border: 1px solid grey;
 
   display: flex;
+  font-size: 20px;
   justify-content: space-between;
   align-items: center;
   padding: 12px var(--horizontal-padding);
   border-top: var(--summary-border);
-  border-bottom: var(--summary-border);
 }
 
-.children {
-  padding: 12px calc(var(--horizontal-padding) + 6px);
+.summaryIcon {
+  cursor: pointer;
 }
 
 .open {
   transform: rotate(180deg);
+}
+
+.children {
+  padding: 12px calc(var(--horizontal-padding) + 6px);
 }

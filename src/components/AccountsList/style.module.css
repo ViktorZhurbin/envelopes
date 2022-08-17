@@ -1,0 +1,17 @@
+.root {
+  display: grid;
+  gap: 4px;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.account:hover {
+  background-color: lightgrey;
+}

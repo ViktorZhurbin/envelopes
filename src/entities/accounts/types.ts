@@ -13,6 +13,7 @@ export interface IAccount {
   id: number;
   userId: number;
   title: string;
+  amount: number;
   currency: string;
   subAccountGroupIds: ISubAccountGroup["id"][];
 }

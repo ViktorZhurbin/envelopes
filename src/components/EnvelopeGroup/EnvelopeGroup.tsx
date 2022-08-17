@@ -4,7 +4,7 @@ import { Envelope } from "../Envelope";
 import { EnvelopeProps } from "./types";
 
 export const EnvelopeGroup = ({ title, ids }: EnvelopeProps) => (
-  <Accordion summary={title}>
+  <Accordion summary={title} isOpen>
     {ids.map((id) => (
       <Envelope key={id} id={id} />
     ))}

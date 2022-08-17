@@ -8,7 +8,9 @@ export const GroupTitle = ({
 }: GroupTitleProps) => {
   return (
     <div className={styles.root} onClick={onClick}>
-      <span>{title}</span>
+      <span>
+        <b>{title}</b>
+      </span>
       <span onClick={onClickIcon}>+</span>
     </div>
   );

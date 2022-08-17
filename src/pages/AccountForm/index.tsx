@@ -10,7 +10,7 @@ import { Pages } from "@/routes";
 export const AccountForm = () => {
   const navigate = useNavigate();
 
-  const handleCancel = () => navigate(Pages.Home);
+  const handleCancel = () => navigate(Pages.Accounts);
 
   const handleSubmit = (values: Record<string, FormDataEntryValue>) => {
     console.log(values);

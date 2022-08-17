@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import classes from "./style.module.css";
 import { AccordionProps } from "./types";
@@ -7,9 +7,14 @@ import { AccordionProps } from "./types";
 export const Accordion = ({
   summary,
   children,
+  isOpen = false,
   childrenClassName,
 }: AccordionProps) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(isOpen);
+
+  useEffect(() => {
+    setOpen(isOpen);
+  }, [isOpen]);
 
   const toggleOpen = () => setOpen((open) => !open);
 
