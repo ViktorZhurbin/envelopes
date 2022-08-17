@@ -1,16 +1,22 @@
-import { AccountAccordion } from "@/components/AccountAccordion";
-import { Envelope } from "@/components/Envelope";
+import { EnvelopeGroup } from "@/components/EnvelopeGroup";
 import { accounts } from "@/mockData";
+
+import { Accordion } from "../Accordion";
+import classes from "./style.module.css";
 
 export const Accounts = () => {
   return (
     <div>
-      {accounts.map(({ id, title, amount, envelopeIds }) => (
-        <AccountAccordion key={id} title={title} amount={amount}>
-          {envelopeIds.map((id) => (
-            <Envelope key={id} id={id} />
+      {accounts.map(({ id, title, subAccountGroupIds }) => (
+        <Accordion
+          key={id}
+          summary={title}
+          childrenClassName={classes.accountChildren}
+        >
+          {subAccountGroupIds.map((id) => (
+            <EnvelopeGroup key={id} id={id} />
           ))}
-        </AccountAccordion>
+        </Accordion>
       ))}
     </div>
   );

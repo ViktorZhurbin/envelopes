@@ -1,10 +1,14 @@
 import cn from "classnames";
 import { useState } from "react";
 
-import classes from "./Accordion.module.css";
-import { AccordionProps } from "./Accordion.types";
+import classes from "./style.module.css";
+import { AccordionProps } from "./types";
 
-export const Accordion = ({ summary, children }: AccordionProps) => {
+export const Accordion = ({
+  summary,
+  children,
+  childrenClassName,
+}: AccordionProps) => {
   const [open, setOpen] = useState(false);
 
   const toggleOpen = () => setOpen((open) => !open);
@@ -17,7 +21,11 @@ export const Accordion = ({ summary, children }: AccordionProps) => {
           V
         </span>
       </div>
-      {open && <div className={classes.children}>{children}</div>}
+      {open && (
+        <div className={cn(classes.children, childrenClassName)}>
+          {children}
+        </div>
+      )}
     </div>
   );
 };

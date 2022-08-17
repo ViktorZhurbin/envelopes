@@ -4,6 +4,8 @@ import { Accounts } from "@/components/Accounts";
 import { GroupTitle } from "@/components/GroupTitle";
 import { Pages } from "@/routes";
 
+import classes from "./style.module.css";
+
 export const Home = () => {
   const navigate = useNavigate();
 
@@ -12,7 +14,7 @@ export const Home = () => {
   };
 
   return (
-    <div>
+    <div className={classes.root}>
       <GroupTitle
         title="Accounts"
         onClick={() => null}
