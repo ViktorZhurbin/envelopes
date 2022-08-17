@@ -1,5 +1,5 @@
-import styles from "./GroupTitle.module.css";
-import { GroupTitleProps } from "./GroupTitle.types";
+import styles from "./style.module.css";
+import { GroupTitleProps } from "./types";
 
 export const GroupTitle = ({
   title,

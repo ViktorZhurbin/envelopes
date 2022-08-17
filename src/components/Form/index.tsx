@@ -1,5 +1,5 @@
 import { FormActions } from "../FormActions";
-import classes from "./Form.module.css";
+import classes from "./style.module.css";
 import { FormProps } from "./types";
 
 export const Form = ({ children, onCancel, onSubmit }: FormProps) => {

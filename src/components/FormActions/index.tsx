@@ -1,4 +1,4 @@
-import classes from "./FormActions.module.css";
+import classes from "./style.module.css";
 import { FormActionsProps } from "./types";
 
 export const FormActions = ({ onCancel }: FormActionsProps) => {

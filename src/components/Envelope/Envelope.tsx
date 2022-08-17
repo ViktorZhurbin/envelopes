@@ -1,4 +1,4 @@
-import classes from "./Envelope.module.css";
+import classes from "./style.module.css";
 import { EnvelopeProps } from "./types";
 
 export const Envelope = ({ title, amount }: EnvelopeProps) => (
