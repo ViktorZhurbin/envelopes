@@ -1,7 +1,7 @@
 import classes from "./style.module.css";
-import { EnvelopeProps } from "./types";
+import { AccountSummaryProps } from "./types";
 
-export const Envelope = ({ title, amount }: EnvelopeProps) => (
+export const AccountSummary = ({ title, amount }: AccountSummaryProps) => (
   <div className={classes.root}>
     <span className={classes.title}>{title}</span>
     <span className={classes.amount}>{amount}</span>

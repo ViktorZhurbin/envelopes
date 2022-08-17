@@ -1,0 +1,12 @@
+.form {
+  display: grid;
+  align-content: space-between;
+  gap: 16px;
+  height: 100%;
+}
+
+.fields {
+  display: grid;
+  gap: 8px;
+}
+
