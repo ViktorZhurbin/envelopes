@@ -3,12 +3,7 @@ import { useEffect, useState } from "react";
 import classes from "./Checkbox.module.css";
 import { CheckboxProps } from "./types";
 
-export const Checkbox = ({
-  label,
-  name,
-  isChecked = false,
-  onChange,
-}: CheckboxProps) => {
+export const Checkbox = ({ label, name, isChecked = false }: CheckboxProps) => {
   const [checked, setChecked] = useState(isChecked);
 
   useEffect(() => {
@@ -17,7 +12,6 @@ export const Checkbox = ({
 
   const handleChange = () => {
     setChecked((checked) => !checked);
-    onChange?.();
   };
 
   return (
