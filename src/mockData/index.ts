@@ -1,8 +1,4 @@
-import {
-  IAccount,
-  ISubAccount,
-  ISubAccountGroup,
-} from "@/entities/accounts/types";
+import { IAccount, ISubAccount, ISubAccountGroup } from "@/entities/accounts";
 
 const currency1 = "RSD";
 const currency2 = "EUR";

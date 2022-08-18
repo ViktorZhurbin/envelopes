@@ -1,4 +1,4 @@
-import { ISubAccountGroup } from "@/entities/accounts/types";
+import { ISubAccountGroup } from "@/entities/accounts";
 
 export interface EnvelopeProps {
   title: string;

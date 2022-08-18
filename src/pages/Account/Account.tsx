@@ -1,6 +1,6 @@
-import { AccountSummary } from "@/components/AccountSummary";
-import { EnvelopeGroup } from "@/components/EnvelopeGroup";
-import { GoBack } from "@/components/GoBack";
+import { AccountSummary } from "components/AccountSummary";
+import { EnvelopeGroup } from "components/EnvelopeGroup";
+import { GoBack } from "components/GoBack";
 
 import classes from "./styles.module.css";
 import { AccountProps } from "./types";

@@ -19,7 +19,10 @@
     "sourceMap": true,
     "types": ["vite/client"],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "components/*": ["src/components/*"],
+      "layouts/*": ["src/layouts/*"],
+      "pages/*": ["src/pages/*"]
     }
   },
   "include": ["src", "./vite.config.ts"],

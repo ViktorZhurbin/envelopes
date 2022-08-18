@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
-import { Checkbox } from "@/components/Checkbox";
-import { Form } from "@/components/Form";
-import { Input } from "@/components/Input";
-import { Select } from "@/components/Select";
 import { CURRENCIES } from "@/constants/currencies";
 import { Pages } from "@/routes";
+
+import { Checkbox } from "components/form/Checkbox";
+import { Form } from "components/form/Form";
+import { Input } from "components/form/Input";
+import { Select } from "components/form/Select";
 
 export const AccountForm = () => {
   const navigate = useNavigate();
