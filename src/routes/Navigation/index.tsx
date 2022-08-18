@@ -1,9 +1,10 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
-import { Account } from "@/pages/Account";
-import { AccountForm } from "@/pages/AccountForm";
-import { Accounts } from "@/pages/Accounts";
 import { Pages } from "@/routes";
+
+import { Account } from "pages/Account";
+import { AccountForm } from "pages/AccountForm";
+import { Accounts } from "pages/Accounts";
 
 export const Navigation = () => {
   return (

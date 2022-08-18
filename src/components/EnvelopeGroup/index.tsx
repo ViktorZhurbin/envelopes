@@ -1,4 +1,4 @@
-import { ISubAccountGroup } from "@/entities/accounts/types";
+import { ISubAccountGroup } from "@/entities/accounts";
 import { subAccountGroups } from "@/mockData";
 
 import { EnvelopeGroup as EnvelopeGroupComponent } from "./EnvelopeGroup";

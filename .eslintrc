@@ -11,7 +11,7 @@
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["simple-import-sort"],
+  "plugins": ["import"],
   "env": {
     "browser": true,
     "node": true
@@ -19,10 +19,41 @@
   "settings": {
     "react": {
       "version": "18.0.0"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "src/"
+      }
     }
   },
   "rules": {
-    "simple-import-sort/imports": "warn",
-    "simple-import-sort/exports": "warn"
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling"],
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "{layouts, pages, components}/**",
+            "group": "internal"
+          }
+        ],
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": ["builtin", "external"],
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "import/no-unresolved": "error"
   }
 }

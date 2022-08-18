@@ -1,4 +1,4 @@
-import { ISubAccount } from "@/entities/accounts/types";
+import { ISubAccount } from "@/entities/accounts";
 import { subAccounts } from "@/mockData";
 
 import { Envelope as EnvelopeComponent } from "./Envelope";
