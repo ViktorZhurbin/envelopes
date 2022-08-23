@@ -1,3 +1,3 @@
 export interface PlusIconProps {
-  onClick: () => void;
+  onClick?: () => void;
 }

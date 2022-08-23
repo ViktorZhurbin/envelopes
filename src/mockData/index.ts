@@ -11,8 +11,6 @@ export const accounts: IAccount[] = [
     amount: 5000000,
     currency: currency1,
     subAccountGroupIds: [1, 3, 4],
-    private: false,
-    archived: false,
   },
   {
     id: 2,
@@ -21,8 +19,6 @@ export const accounts: IAccount[] = [
     amount: 1000000,
     currency: currency2,
     subAccountGroupIds: [2],
-    private: false,
-    archived: false,
   },
 ];
 
@@ -30,21 +26,21 @@ export const subAccountGroups: ISubAccountGroup[] = [
   {
     id: 1,
     title: "Прочее",
-    subAccountIds: [5],
+    subAccountIds: [5, 6],
     userId: 1,
     accountId: 1,
   },
   {
     id: 2,
     title: "Прочее",
-    subAccountIds: [6],
+    subAccountIds: [4, 3],
     userId: 1,
     accountId: 2,
   },
   {
     id: 3,
     title: "Наташины",
-    subAccountIds: [1],
+    subAccountIds: [1, 2],
     userId: 1,
     accountId: 1,
   },

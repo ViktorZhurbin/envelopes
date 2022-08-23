@@ -3,8 +3,8 @@
   gap: 16px;
 }
 
-.navigation {
+.addGroup {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  cursor: pointer;
 }

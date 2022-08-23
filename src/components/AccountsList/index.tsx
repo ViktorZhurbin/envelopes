@@ -11,10 +11,10 @@ export const AccountsList = () => {
   return (
     <div className={classes.root}>
       {accounts.map(({ id, title, amount }) => {
-        const handleNavigate = () => navigate(`${Pages.Accounts}/${id}`);
+        const goToAddAccount = () => navigate(`${Pages.Accounts}/${id}`);
 
         return (
-          <div key={id} className={classes.account} onClick={handleNavigate}>
+          <div key={id} className={classes.account} onClick={goToAddAccount}>
             <span>{title}</span>
             <span>{amount}</span>
           </div>

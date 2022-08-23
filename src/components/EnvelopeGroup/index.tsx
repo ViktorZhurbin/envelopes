@@ -1,10 +1,10 @@
-import { ISubAccountGroup } from "@/entities/accounts";
 import { subAccountGroups } from "@/mockData";
 
 import { EnvelopeGroup as EnvelopeGroupComponent } from "./EnvelopeGroup";
+import { EnvelopeGroupProps } from "./types";
 
-export const EnvelopeGroup = ({ id }: { id: ISubAccountGroup["id"] }) => {
-  const envelopeGroup = subAccountGroups.find((envelope) => envelope.id === id);
+export const EnvelopeGroup = ({ id, accountId }: EnvelopeGroupProps) => {
+  const envelopeGroup = subAccountGroups.find((group) => group.id === id);
 
   if (!envelopeGroup) {
     return null;
@@ -12,5 +12,12 @@ export const EnvelopeGroup = ({ id }: { id: ISubAccountGroup["id"] }) => {
 
   const { title, subAccountIds } = envelopeGroup;
 
-  return <EnvelopeGroupComponent title={title} ids={subAccountIds} />;
+  return (
+    <EnvelopeGroupComponent
+      id={id}
+      title={title}
+      accountId={accountId}
+      subAccountIds={subAccountIds}
+    />
+  );
 };
