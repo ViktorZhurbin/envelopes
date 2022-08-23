@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-import { ISubAccountGroup } from "@/entities/accounts";
-import { accounts } from "@/mockData";
+import { subAccountGroups } from "@/mockData";
 
 import { AccountSummary } from "components/AccountSummary";
 import { AddGroupForm } from "components/AddGroupForm";
@@ -12,33 +11,29 @@ import { PlusIcon } from "components/icons/PlusIcon";
 import classes from "./styles.module.css";
 import { AccountProps } from "./types";
 
-export const Account = ({ id, title, amount, groupIds }: AccountProps) => {
+export const AccountComponent = ({ id, title, amount }: AccountProps) => {
   const [isAddingGroup, setAddingGroup] = useState(false);
+
+  const envelopeGroups = subAccountGroups.filter(
+    ({ accountId }) => accountId === id
+  );
 
   const handleStartAddGroup = () => setAddingGroup(true);
   const handleStopAddGroup = () => setAddingGroup(false);
-
-  const handleSubmit = (groupId: ISubAccountGroup["id"]) => {
-    handleStopAddGroup();
-
-    accounts
-      .find((account) => account.id === id)
-      ?.subAccountGroupIds?.push(groupId);
-  };
 
   return (
     <div className={classes.root}>
       <GoBack />
       <AccountSummary title={title} amount={amount} />
       <div>
-        {groupIds.map((groupId) => (
-          <EnvelopeGroup key={groupId} id={groupId} accountId={id} />
+        {envelopeGroups.map(({ id, title }) => (
+          <EnvelopeGroup key={id} id={id} title={title} accountId={id} />
         ))}
         {isAddingGroup ? (
           <div>
             <AddGroupForm
               onCancel={handleStopAddGroup}
-              onSubmit={handleSubmit}
+              onSubmit={handleStopAddGroup}
             />
           </div>
         ) : (

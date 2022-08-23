@@ -15,26 +15,24 @@ export interface IAccount {
   title: string;
   amount: number;
   currency: string;
-  subAccountGroupIds: ISubAccountGroup["id"][];
 }
 
 export interface ISubAccountGroup {
   id: number;
   userId: number;
   title: string;
-  subAccountIds: ISubAccount["id"][];
-  accountId: number;
+  accountId: IAccount["id"];
 }
 
 export interface ISubAccount {
   id: number;
   userId: number;
-  groupId: number | null;
   title: string;
   // all amounts are gonna be in 'cents'
   // to avoid imprecise calculation pitfalls
   // i.e. $24 will be 2400, 1RSD will be 100, etc.
   amount: number;
+  groupId: ISubAccountGroup["id"] | null;
   // personal: boolean;
   // archived: boolean;
   // transactionIds: number[];

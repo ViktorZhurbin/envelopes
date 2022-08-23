@@ -9,11 +9,11 @@ import { PlusIcon } from "components/icons/PlusIcon";
 import classes from "./style.module.css";
 import { EnvelopeGroupComponentProps } from "./types";
 
-export const EnvelopeGroup = ({
+export const EnvelopeGroupComponent = ({
   id,
   title,
   accountId,
-  subAccountIds,
+  envelopes,
 }: EnvelopeGroupComponentProps) => {
   const navigate = useNavigate();
 
@@ -23,8 +23,8 @@ export const EnvelopeGroup = ({
 
   return (
     <Accordion summary={title} isOpen>
-      {subAccountIds.map((subAccountId) => (
-        <Envelope key={subAccountId} id={subAccountId} />
+      {envelopes.map(({ id, title, amount }) => (
+        <Envelope key={id} title={title} amount={amount} />
       ))}
       <div className={classes.add} onClick={gotToAddSubAccount}>
         <PlusIcon /> Add

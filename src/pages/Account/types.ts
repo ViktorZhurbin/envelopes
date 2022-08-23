@@ -1,6 +1,3 @@
 import { IAccount } from "@/entities/accounts";
 
-export interface AccountProps
-  extends Pick<IAccount, "id" | "title" | "amount"> {
-  groupIds: IAccount["subAccountGroupIds"];
-}
+export type AccountProps = Pick<IAccount, "id" | "title" | "amount">;

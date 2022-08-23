@@ -10,7 +10,6 @@ export const accounts: IAccount[] = [
     title: "Личная карта",
     amount: 5000000,
     currency: currency1,
-    subAccountGroupIds: [1, 3, 4],
   },
   {
     id: 2,
@@ -18,7 +17,6 @@ export const accounts: IAccount[] = [
     title: "Бизнес карта",
     amount: 1000000,
     currency: currency2,
-    subAccountGroupIds: [2],
   },
 ];
 
@@ -26,28 +24,24 @@ export const subAccountGroups: ISubAccountGroup[] = [
   {
     id: 1,
     title: "Прочее",
-    subAccountIds: [5, 6],
     userId: 1,
     accountId: 1,
   },
   {
     id: 2,
     title: "Прочее",
-    subAccountIds: [4, 3],
     userId: 1,
     accountId: 2,
   },
   {
     id: 3,
     title: "Наташины",
-    subAccountIds: [1, 2],
     userId: 1,
     accountId: 1,
   },
   {
     id: 4,
     title: "Продукты",
-    subAccountIds: [1],
     userId: 1,
     accountId: 1,
   },

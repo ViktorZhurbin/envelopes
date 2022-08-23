@@ -18,7 +18,6 @@ export const AddGroupForm = ({ onCancel, onSubmit }: AddGroupFormProps) => {
       ...values,
       id,
       accountId: Number(params.accountId),
-      subAccountIds: [],
     } as unknown as ISubAccountGroup);
 
     onSubmit(id);

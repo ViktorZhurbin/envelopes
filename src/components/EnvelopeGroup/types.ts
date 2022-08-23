@@ -1,13 +1,11 @@
-import { IAccount, ISubAccountGroup } from "@/entities/accounts";
+import { IAccount, ISubAccount, ISubAccountGroup } from "@/entities/accounts";
 
 export interface EnvelopeGroupProps {
   id: ISubAccountGroup["id"];
   accountId: IAccount["id"];
+  title: ISubAccountGroup["title"];
 }
 
-export interface EnvelopeGroupComponentProps
-  extends Pick<EnvelopeGroupProps, "accountId"> {
-  id: ISubAccountGroup["id"];
-  title: ISubAccountGroup["title"];
-  subAccountIds: ISubAccountGroup["subAccountIds"];
+export interface EnvelopeGroupComponentProps extends EnvelopeGroupProps {
+  envelopes: ISubAccount[];
 }

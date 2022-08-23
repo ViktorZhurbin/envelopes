@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 
 import { accounts } from "@/mockData";
 
-import { Account as AccountComponent } from "./Account";
+import { AccountComponent } from "./component";
 
 export const Account = () => {
   const { accountId } = useParams();
@@ -17,14 +17,7 @@ export const Account = () => {
     return null;
   }
 
-  const { id, title, amount, subAccountGroupIds } = account;
+  const { id, title, amount } = account;
 
-  return (
-    <AccountComponent
-      id={id}
-      title={title}
-      amount={amount}
-      groupIds={subAccountGroupIds}
-    />
-  );
+  return <AccountComponent id={id} title={title} amount={amount} />;
 };
