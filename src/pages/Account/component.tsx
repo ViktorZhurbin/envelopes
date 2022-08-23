@@ -27,7 +27,7 @@ export const AccountComponent = ({ id, title, amount }: AccountProps) => {
       <AccountSummary title={title} amount={amount} />
       <div>
         {envelopeGroups.map(({ id, title }) => (
-          <EnvelopeGroup key={id} id={id} title={title} accountId={id} />
+          <EnvelopeGroup key={id} id={id} title={title} />
         ))}
         {isAddingGroup ? (
           <div>

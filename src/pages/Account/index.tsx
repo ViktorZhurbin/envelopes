@@ -7,10 +7,6 @@ import { AccountComponent } from "./component";
 export const Account = () => {
   const { accountId } = useParams();
 
-  if (!accountId) {
-    return null;
-  }
-
   const account = accounts.find(({ id }) => id === Number(accountId));
 
   if (!account) {

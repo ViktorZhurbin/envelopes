@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { AccountsList } from "@/components/AccountsList";
 import { GroupTitle } from "@/components/GroupTitle";
@@ -21,7 +21,6 @@ export const Accounts = () => {
         onClickIcon={handleAddAccount}
       />
       <AccountsList />
-      <Outlet />
     </div>
   );
 };

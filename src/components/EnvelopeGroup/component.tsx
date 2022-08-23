@@ -10,17 +10,15 @@ import classes from "./style.module.css";
 import { EnvelopeGroupComponentProps } from "./types";
 
 export const EnvelopeGroupComponent = ({
-  id,
+  groupId,
   title,
-  accountId,
   envelopes,
 }: EnvelopeGroupComponentProps) => {
   const navigate = useNavigate();
 
   const gotToAddSubAccount = () => {
     const to = generatePath(Pages.AddSubAccount, {
-      accountId: String(accountId),
-      groupId: String(id),
+      groupId: String(groupId),
     });
 
     navigate(to);
@@ -30,8 +28,7 @@ export const EnvelopeGroupComponent = ({
     <Accordion summary={title} isOpen>
       {envelopes.map(({ id, title, amount }) => {
         const to = generatePath(Pages.SubAccount, {
-          accountId: String(accountId),
-          groupId: String(id),
+          groupId: String(groupId),
           id: String(id),
         });
 

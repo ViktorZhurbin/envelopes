@@ -3,15 +3,10 @@ import { subAccounts } from "@/mockData/accounts";
 import { EnvelopeGroupComponent } from "./component";
 import { EnvelopeGroupProps } from "./types";
 
-export const EnvelopeGroup = ({ id, title, accountId }: EnvelopeGroupProps) => {
+export const EnvelopeGroup = ({ id, title }: EnvelopeGroupProps) => {
   const envelopes = subAccounts.filter(({ groupId }) => groupId === id);
 
   return (
-    <EnvelopeGroupComponent
-      id={id}
-      title={title}
-      accountId={accountId}
-      envelopes={envelopes}
-    />
+    <EnvelopeGroupComponent groupId={id} title={title} envelopes={envelopes} />
   );
 };
