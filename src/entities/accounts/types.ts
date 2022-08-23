@@ -16,6 +16,8 @@ export interface IAccount {
   amount: number;
   currency: string;
   subAccountGroupIds: ISubAccountGroup["id"][];
+  private: boolean;
+  archived: boolean;
 }
 
 export interface ISubAccountGroup {

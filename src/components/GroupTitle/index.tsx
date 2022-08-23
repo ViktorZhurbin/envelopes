@@ -1,3 +1,5 @@
+import { PlusIcon } from "components/icons/PlusIcon";
+
 import styles from "./style.module.css";
 import { GroupTitleProps } from "./types";
 
@@ -11,7 +13,7 @@ export const GroupTitle = ({
       <span>
         <b>{title}</b>
       </span>
-      <span onClick={onClickIcon}>+</span>
+      <PlusIcon onClick={onClickIcon} />
     </div>
   );
 };

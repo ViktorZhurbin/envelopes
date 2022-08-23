@@ -11,6 +11,8 @@ export const accounts: IAccount[] = [
     amount: 5000000,
     currency: currency1,
     subAccountGroupIds: [1, 3, 4],
+    private: false,
+    archived: false,
   },
   {
     id: 2,
@@ -19,6 +21,8 @@ export const accounts: IAccount[] = [
     amount: 1000000,
     currency: currency2,
     subAccountGroupIds: [2],
+    private: false,
+    archived: false,
   },
 ];
 

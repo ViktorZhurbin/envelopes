@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
 import { CURRENCIES } from "@/constants/currencies";
+import { IAccount } from "@/entities/accounts";
+import { accounts } from "@/mockData";
 import { Pages } from "@/routes";
 
 import { Checkbox } from "components/form/Checkbox";
@@ -15,6 +17,14 @@ export const AccountForm = () => {
 
   const handleSubmit = (values: Record<string, FormDataEntryValue>) => {
     console.log(values);
+
+    accounts.push({
+      ...values,
+      id: accounts.length + 1,
+      subAccountGroupIds: [],
+    } as unknown as IAccount);
+
+    navigate(Pages.Accounts);
   };
 
   return (
