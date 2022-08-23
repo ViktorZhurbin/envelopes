@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-import { accounts } from "@/mockData";
+import { accounts } from "@/mockData/accounts";
 
 import { AccountComponent } from "./component";
 

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import { accounts } from "@/mockData";
+import { accounts } from "@/mockData/accounts";
 import { Pages } from "@/routes";
 
 import classes from "./style.module.css";

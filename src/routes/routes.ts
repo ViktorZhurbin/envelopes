@@ -1,7 +1,8 @@
 export enum Pages {
   Home = "/",
   Accounts = "/accounts",
-  AddAccount = "/accounts/new",
   Account = "/accounts/:accountId",
-  AddSubAccount = "/accounts/:accountId/:groupId/new",
+  AddAccount = "/accounts/new",
+  SubAccount = "/accounts/:accountId/groups/:groupId/sub-accounts/:id",
+  AddSubAccount = "/accounts/:accountId/groups/:groupId/sub-accounts/new",
 }

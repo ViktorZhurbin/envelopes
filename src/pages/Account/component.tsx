@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { subAccountGroups } from "@/mockData";
+import { subAccountGroups } from "@/mockData/accounts";
 
 import { AccountSummary } from "components/AccountSummary";
 import { AddGroupForm } from "components/AddGroupForm";

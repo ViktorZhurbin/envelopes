@@ -1,4 +1,4 @@
-import { subAccounts } from "@/mockData";
+import { subAccounts } from "@/mockData/accounts";
 
 import { EnvelopeGroupComponent } from "./component";
 import { EnvelopeGroupProps } from "./types";

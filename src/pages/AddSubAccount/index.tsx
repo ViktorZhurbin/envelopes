@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 
 import { ISubAccount } from "@/entities/accounts";
-import { subAccounts } from "@/mockData";
+import { subAccounts } from "@/mockData/accounts";
 
 import { Form } from "components/form/Form";
 import { Input } from "components/form/Input";

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 import { CURRENCIES } from "@/constants/currencies";
 import { IAccount } from "@/entities/accounts";
-import { accounts } from "@/mockData";
+import { accounts } from "@/mockData/accounts";
 import { Pages } from "@/routes";
 
 import { Form } from "components/form/Form";
