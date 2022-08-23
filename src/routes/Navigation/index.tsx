@@ -1,9 +1,10 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
+import { AddAccount } from "@/pages/AddAccount";
+import { AddSubAccount } from "@/pages/AddSubAccount";
 import { Pages } from "@/routes";
 
 import { Account } from "pages/Account";
-import { AccountForm } from "pages/AccountForm";
 import { Accounts } from "pages/Accounts";
 
 export const Navigation = () => {
@@ -14,8 +15,9 @@ export const Navigation = () => {
         element={<Navigate to={Pages.Accounts} replace />}
       />
       <Route path={Pages.Accounts} element={<Accounts />} />
-      <Route path={`${Pages.Accounts}/:accountId`} element={<Account />} />
-      <Route path={Pages.AddAccount} element={<AccountForm />} />
+      <Route path={Pages.AddAccount} element={<AddAccount />} />
+      <Route path={Pages.Account} element={<Account />} />
+      <Route path={Pages.AddSubAccount} element={<AddSubAccount />} />
     </Routes>
   );
 };

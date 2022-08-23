@@ -17,10 +17,11 @@ export const Account = () => {
     return null;
   }
 
-  const { title, amount, subAccountGroupIds } = account;
+  const { id, title, amount, subAccountGroupIds } = account;
 
   return (
     <AccountComponent
+      id={id}
       title={title}
       amount={amount}
       groupIds={subAccountGroupIds}
